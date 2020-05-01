@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hobbycoding</title>
+        <link rel="stylesheet" href="asset/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <body>
+            <nav>
+                <div class="menu-mobile">
+                    <a href="#" onclick="showMenu()">Menu</a>
+                </div>
+                <ul id="menu">
+                    <li><a href="#">BERANDA</a></li>
+                    <li><a href="https://www.instagram.com/arjuna_manullang12/" target="_blank">CONTACT ME</a></li>
+                </ul>
+            </nav>
+            <section id="box-profile">
+                <div class="img-profile">
+                    <div class="photo" style="background-image: url(asset/img/teknologi.jpg);"></div>
+                </div>
+                <div class="description">
+                    <h1 id="pName">FRENGKI ARJUNA</h1>
+                    <p id="pRole">Junior Programming</p>
+                    <a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
+                    <a href="#" class="button border-blue">Resum</a>
+                </div>
+                <div class="information">
+                    <div class="data">
+                        <p class="field">Service</p>
+                        <p id="pAveilable" class="text-gray">Full Time</p>
+                    </div>
+                    <div class="data">
+                        <p class="field">Age</p>
+                        <p id="pAge" class="text-gray">20</p>
+                    </div>
+                    <div class="data">
+                        <p class="field">Location</p>
+                        <p id="pLocation" class="text-gray">Aceh Tenggara,Indonesia</p>
+                    </div>
+                    <div class="data">
+                        <p class="field">Year Experience</p>
+                        <p id="pExperience" class="text-gray">2019</p>
+                    </div>
+                    <div class="data">
+                        <p class="field">Email</p>
+                        <p id="pEmail" class="text-gray">frengkiarjuna3245@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+            <section id="input-form">
+                <form action="#" method="#">
+                    <div class="form">
+                        <label>Nama</label>
+                        <input id="inpName" type="text" name="nama">
+                    </div>
+                    <div class="form">
+                        <label>Skills</label>
+                        <input id="inpRole" type="text" name="role">
+                    </div>
+                    <div class="form">
+                        <label>Service</label>
+                        <input id="inpAvelability" type="text" name="avelability">
+                    </div>
+                    <div class="form">
+                        <label>Age</label>
+                        <input id="inpAge" type="number" name="age">
+                    </div>
+                    <div class="form">
+                        <label>Locattion</label>
+                        <input id="inpLocation" type="text" name="location">
+                    </div>
+                    <div class="form">
+                        <label>Year Experience</label>
+                        <input id="inpYears" type="number" name="years">
+                    </div>
+                    <div class="form">
+                        <label>Email</label>
+                        <input id="inpEmail" type="email" name="email">
+                    </div>
+                    <div class="form">
+                        <input onclick="simpanForm()" type="submit" name="submit" value="SUBMIT" class="bg-blue">
+                    </div>
+                </form>
+            </section>
+            <script>
+                var formMenu = document.getElementById("input-form");
+                formMenu.style.display = "none";
+
+                function editForm(){
+                    if(formMenu.style.display === "none"){
+                        formMenu.style.display = "block";
+                    }else{
+                        formMenu.style.display = "none";
+                    }
+
+                    var name= document.getElementById("pName").innerHTML;
+                    var role= document.getElementById("pRole").innerHTML;
+                    var aveilable= document.getElementById("pAveilable").innerHTML;
+                    var age= document.getElementById("pAge").innerHTML;
+                    var location= document.getElementById("pLocation").innerHTML;
+                    var experience= document.getElementById("pExperience").innerHTML;
+                    var email= document.getElementById("pEmail").innerHTML;
+
+                    document.getElementById("inpName").value = name;
+                    document.getElementById("inpRole").value = role;
+                    document.getElementById("inpAvelability").value = aveilable;
+                    document.getElementById("inpAge").value = age;
+                    document.getElementById("inpLocation").value = location;
+                    document.getElementById("inpYears").value = experience;
+                    document.getElementById("inpEmail").value = email;
+                }
+                function simpanForm(){
+
+                }
+                function showMenu(){
+
+                    var menu = document.getElementById("menu");
+                    var box  = document.getElementById("box-profile");
+
+                    if(menu.style.display === "block"){
+                        menu.style.display = "none";
+                        box.style.paddingTop = "0px";
+
+                    }else{
+                        menu.style.display = "block";
+                        box.style.paddingTop = "125px";
+                    }
+
+                }
+            </script>
+        </body>
+    </head>
+</html>
